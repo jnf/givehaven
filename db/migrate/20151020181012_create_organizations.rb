@@ -13,7 +13,7 @@ class CreateOrganizations < ActiveRecord::Migration
       t.string :shipping_state
       t.integer :shipping_postal_code
       t.integer :karma
-      t.string :approved
+      t.string :approval_status
 
       t.timestamps null: false
     end

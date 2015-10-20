@@ -4,7 +4,7 @@ class CreateGifts < ActiveRecord::Migration
       t.integer :project_id
       t.integer :user_id
       t.integer :amount
-      t.integer :cc_number
+      t.string :cc_number
       t.string :cc_name
       t.date :cc_exp
       t.integer :cc_ccv

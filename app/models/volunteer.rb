@@ -3,6 +3,6 @@ class Volunteer < ActiveRecord::Base
   belongs_to :user
 
   #---------------validations----------------------
-  validates :bio, :approved, :role, presence: true
-  
+  validates :bio, :approval_status, :role, presence: true
+
 end

@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20151020181959) do
     t.integer  "project_id"
     t.integer  "user_id"
     t.integer  "amount"
-    t.integer  "cc_number"
+    t.string   "cc_number"
     t.string   "cc_name"
     t.date     "cc_exp"
     t.integer  "cc_ccv"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20151020181959) do
     t.string   "cc_address_2"
     t.string   "cc_city"
     t.string   "cc_state"
-    t.intger   "cc_postal_code"
+    t.integer  "cc_postal_code"
     t.string   "payment_status"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
@@ -56,7 +56,7 @@ ActiveRecord::Schema.define(version: 20151020181959) do
     t.string   "shipping_state"
     t.integer  "shipping_postal_code"
     t.integer  "karma"
-    t.string   "approved"
+    t.string   "approval_status"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
   end
@@ -89,10 +89,10 @@ ActiveRecord::Schema.define(version: 20151020181959) do
   create_table "volunteers", force: :cascade do |t|
     t.integer  "user_id"
     t.text     "bio"
-    t.string   "approved"
+    t.string   "approval_status"
     t.string   "role"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
 end
