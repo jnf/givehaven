@@ -3,6 +3,7 @@ class CreateOrganizations < ActiveRecord::Migration
     create_table :organizations do |t|
       t.integer :user_id
       t.string :name
+      t.string :contact_phone
       t.string :population_served
       t.integer :annual_funding
       t.integer :number_served
@@ -12,6 +13,7 @@ class CreateOrganizations < ActiveRecord::Migration
       t.string :shipping_state
       t.integer :shipping_postal_code
       t.integer :karma
+      t.string :approved
 
       t.timestamps null: false
     end
