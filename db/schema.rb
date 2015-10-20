@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20151020181959) do
     t.string   "cc_address_2"
     t.string   "cc_city"
     t.string   "cc_state"
+    t.intger   "cc_postal_code"
     t.string   "payment_status"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
@@ -32,8 +33,7 @@ ActiveRecord::Schema.define(version: 20151020181959) do
 
   create_table "items", force: :cascade do |t|
     t.string   "project_id"
-    t.string   "integer"
-    t.string   "title"
+    t.string   "name"
     t.string   "description"
     t.string   "url"
     t.integer  "quantity"
@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 20151020181959) do
   create_table "organizations", force: :cascade do |t|
     t.integer  "user_id"
     t.string   "name"
+    t.string   "contact_phone"
     t.string   "population_served"
     t.integer  "annual_funding"
     t.integer  "number_served"
@@ -55,6 +56,7 @@ ActiveRecord::Schema.define(version: 20151020181959) do
     t.string   "shipping_state"
     t.integer  "shipping_postal_code"
     t.integer  "karma"
+    t.string   "approved"
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
   end
@@ -78,9 +80,10 @@ ActiveRecord::Schema.define(version: 20151020181959) do
     t.string   "username"
     t.string   "first_name"
     t.string   "last_name"
-    t.boolean  "donor"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "password_digest"
+    t.boolean  "donor",           default: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
   end
 
   create_table "volunteers", force: :cascade do |t|

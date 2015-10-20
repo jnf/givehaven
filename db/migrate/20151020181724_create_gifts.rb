@@ -12,6 +12,7 @@ class CreateGifts < ActiveRecord::Migration
       t.string :cc_address_2
       t.string :cc_city
       t.string :cc_state
+      t.integer :cc_postal_code
       t.string :payment_status
 
       t.timestamps null: false

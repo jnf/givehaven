@@ -1,0 +1,81 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+// GLOBALS
+p {
+  font-size: 16px;
+}
+
+// HEADER
+.brand {
+  margin-bottom: 50px;
+  padding: 20px;
+  color: #192Bc2;
+  font-size: 25px;
+  letter-spacing: 1px;
+  font-family: 'Cabin';
+}
+
+.brand li {
+  font-size: 16px;
+}
+
+.brand a, .brand a:visited {
+  color: #192Bc2;
+  text-decoration: none;
+}
+
+
+// NAV BAR
+.brand_nav {
+  background-color: #4392f1;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.brand_nav a, .brand_nav a:visited {
+  color: #fff;
+  background-color: #4392f1;
+}
+
+.brand_nav ul li a:hover{
+  background-color: #72ADF5;
+}
+
+.active ul li a {
+  background-color: #fff;
+}
+
+
+// FORMS
+.center-form {
+  max-width: 40%;
+  margin: auto;
+  margin-top: 75px;
+  padding: 20px;
+  background-color: #5ba0f3;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.center-form legend {
+ color: #fff;
+}
+
+.form-btn {
+  background-color: #2b84ef;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.about {
+  width: 50%;
+  margin: auto;
+  margin-top: 25px;
+  line-height: 1.5;
+}
+
+.container-padding {
+  margin-bottom: 50px;
+}

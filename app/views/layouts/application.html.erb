@@ -3,12 +3,15 @@
 <head>
   <title>Givehaven</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'custom' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="container container-padding">
 
 <%= yield %>
 
+</div>
 </body>
 </html>
