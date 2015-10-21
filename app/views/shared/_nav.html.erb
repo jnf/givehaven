@@ -22,6 +22,8 @@
               <% end %>
               <% if Volunteer.find_by user_id:  @current_user.id %>
                 <li><a href="#">View Pending Projects</a></li>
+              <% else %>
+                <li><a href="#">Volunteer!</a></li>
               <% end %>
             </ul>
           </li>
