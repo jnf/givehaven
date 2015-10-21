@@ -25,10 +25,18 @@
               <% end %>
             </ul>
           </li>
-          <li><a href="/login"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+          <li>
+            <%= link_to session_path(session[:user_id]), method: :delete do %>
+              <i class="glyphicon glyphicon-log-out">Logout</i>
+            <% end %>
+          </li>
         <% else %>
           <li><a href="/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-          <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          <li>
+            <%= link_to login_path do %>
+              <i class="glyphicon glyphicon-log-out">Login</i>
+            <% end %>
+          </li>
         <% end %>
       </ul>
     </div>
