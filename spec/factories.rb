@@ -1,15 +1,15 @@
 FactoryGirl.define do
 
   factory :gift do
+    id 1
     project_id 1
     user_id 1
     amount 10
     cc_number '123456789012334'
-    cc_name Leslie Knope
+    cc_name 'Leslie Knope'
     cc_exp "Mon, 12 Jan -4712"
     cc_ccv 123
     cc_address_1 "1234 Happy Lane"
-    cc_address_2
     cc_city 'Pawnee'
     cc_state 'IN'
     cc_postal_code '12345'
@@ -17,6 +17,7 @@ FactoryGirl.define do
   end
 
   factory :item do
+    id 1
     project_id 1
     name "an item"
     description 'does stuff'
@@ -24,16 +25,16 @@ FactoryGirl.define do
     quantity '1'
     price_per '12.74'
     total_cost '12.74'
-    end
   end
 
 	factory :organization do
+    id 1
+    user_id 1
 		name 'Shelter'
 		contact_phone '5091201234'
 		annual_funding 'jentoof'
 		number_served 'jentoof'
     shipping_address_1 '1234 shelter lane'
-    shipping_address_2
     shipping_city 'seattle'
     shipping_state 'wa'
     shipping_postal_code '98133'
@@ -42,6 +43,7 @@ FactoryGirl.define do
 	end
 
   factory :project do
+    id 1
     organization_id 1
     title 'title'
     description 'description'
@@ -54,6 +56,7 @@ FactoryGirl.define do
   end
 
   factory :user do
+    id 1
     email "Leslie@email.com"
     username "waffleluv"
     first_name "Leslie"
@@ -63,6 +66,7 @@ FactoryGirl.define do
   end
 
   factory :volunteer do
+    id 1
     user_id 1
     bio 'bio'
     approval_status 'approved'
