@@ -2,7 +2,8 @@ Rails.application.routes.draw do
 root 'home#index'
 resources :users, except: [:new, :show, :edit]
 resources :sessions, only: [:create, :destroy]
-resources :volunteers, except: [:edit, :show]
+resources :volunteers, only: [:create, :update, :new]
+resources :organizations, only: [:create, :update, :new]
 
   get '/login', to: 'sessions#new', as: 'login'
   get '/signup', to: 'users#new', as: 'signup'

@@ -1,0 +1,25 @@
+<div class = 'form center-form'>
+  <%= form_for @organization, url: organizations_path do |f| %>
+    <fieldset>
+      <legend>Role: </legend>
+      <div class="form-group">
+        <%= f.label "Data Wrangler" %>
+        <%= f.radio_button :role, "Data Wrangler" %>
+      </div>
+      <div class="form-group">
+        <%= f.label "Tech Wiz" %>
+        <%= f.radio_button :role, "Tech Wiz" %>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Bio:</legend>
+      <div class="form-group">
+        <%= f.text_area :bio, size: "25X100", class: 'form-control text', autofocus: true %>
+      </div>
+    </fieldset>
+    <%= f.hidden_field :approval_status, value: 'pending' %>
+    <%= f.submit 'Volunteer!', class: 'btn form-btn' %>
+
+  <% end %>
+</div>
