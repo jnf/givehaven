@@ -12,8 +12,8 @@ class CreateOrganizations < ActiveRecord::Migration
       t.string :shipping_city
       t.string :shipping_state
       t.integer :shipping_postal_code
-      t.integer :karma
-      t.string :approval_status
+      t.integer :karma, default: 0
+      t.string :approval_status, default: "pending"
 
       t.timestamps null: false
     end

@@ -13,7 +13,7 @@ class CreateGifts < ActiveRecord::Migration
       t.string :cc_city
       t.string :cc_state
       t.integer :cc_postal_code
-      t.string :payment_status
+      t.string :payment_status, default: 'awaiting project completion'
 
       t.timestamps null: false
     end

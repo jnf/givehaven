@@ -26,9 +26,9 @@ ActiveRecord::Schema.define(version: 20151020181959) do
     t.string   "cc_city"
     t.string   "cc_state"
     t.integer  "cc_postal_code"
-    t.string   "payment_status"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.string   "payment_status", default: "awaiting project completion"
+    t.datetime "created_at",                                             null: false
+    t.datetime "updated_at",                                             null: false
   end
 
   create_table "items", force: :cascade do |t|
@@ -55,24 +55,24 @@ ActiveRecord::Schema.define(version: 20151020181959) do
     t.string   "shipping_city"
     t.string   "shipping_state"
     t.integer  "shipping_postal_code"
-    t.integer  "karma"
-    t.string   "approval_status"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.integer  "karma",                default: 0
+    t.string   "approval_status",      default: "pending"
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
   end
 
   create_table "projects", force: :cascade do |t|
     t.integer  "organization_id"
     t.string   "title"
     t.text     "description"
-    t.string   "project_approval"
-    t.string   "funding_status"
-    t.string   "shipping_status"
+    t.string   "project_approval", default: "pending"
+    t.string   "funding_status",   default: "not funded"
+    t.string   "shipping_status",  default: "awaiting project completion"
     t.float    "total"
     t.text     "essay"
-    t.datetime "created_at",       null: false
-    t.date     "expires_on"
-    t.datetime "updated_at",       null: false
+    t.date     "expires_on",       default: '2016-01-21'
+    t.datetime "created_at",                                               null: false
+    t.datetime "updated_at",                                               null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -89,10 +89,10 @@ ActiveRecord::Schema.define(version: 20151020181959) do
   create_table "volunteers", force: :cascade do |t|
     t.integer  "user_id"
     t.text     "bio"
-    t.string   "approval_status"
+    t.string   "approval_status", default: "pending"
     t.string   "role"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
   end
 
 end

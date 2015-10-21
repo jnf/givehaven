@@ -7,8 +7,29 @@
         <li><a href="/about">About</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-        <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <% if @current_user %>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><%= @current_user.username %>
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Account</a></li>
+              <li><a href="#">Start a Project</a></li>
+              <% if Organization.find_by user_id: @current_user.id %>
+                <li><a href="#">My Projects</a></li>
+              <% end %>
+              <% if @current_user.donor == true %>
+                <li><a href="#">Projects I've Funded</a></li>
+              <% end %>
+              <% if Volunteer.find_by user_id:  @current_user.id %>
+                <li><a href="#">View Pending Projects</a></li>
+              <% end %>
+            </ul>
+          </li>
+          <li><a href="/login"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+        <% else %>
+          <li><a href="/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <% end %>
       </ul>
     </div>
   </div>

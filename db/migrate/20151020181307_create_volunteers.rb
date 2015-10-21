@@ -3,7 +3,7 @@ class CreateVolunteers < ActiveRecord::Migration
     create_table :volunteers do |t|
       t.integer :user_id
       t.text :bio
-      t.string :approval_status
+      t.string :approval_status, default: 'pending'
       t.string :role
 
       t.timestamps null: false

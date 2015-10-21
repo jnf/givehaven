@@ -4,13 +4,12 @@ class CreateProjects < ActiveRecord::Migration
       t.integer :organization_id
       t.string :title
       t.text :description
-      t.string :project_approval
-      t.string :funding_status
-      t.string :shipping_status
+      t.string :project_approval, default: 'pending'
+      t.string :funding_status, default: 'not funded'
+      t.string :shipping_status, default: 'awaiting project completion'
       t.float :total
       t.text :essay
-      t.date :created_at
-      t.date :expires_on
+      t.date :expires_on, default: Date.today + 3.month
 
       t.timestamps null: false
     end

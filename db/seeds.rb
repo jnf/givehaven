@@ -2,7 +2,8 @@ gifts = [
   { user_id: 1, amount: 50,
     cc_number: "123456789012334", cc_name: "Brenna Leker", cc_exp: "Mon, 12 Jan -4712", cc_ccv: 123, cc_address_1: "987 Cinder Ave", cc_city:"Bremerton", cc_state: "WA", cc_postal_code: 98312, payment_status: "approved" },
   { user_id: 2, amount: 750,
-    cc_number: "1234567890123", cc_name: "Meowmers Bojangles", cc_exp: "Mon, 12 Jan -4712", cc_ccv: 123, cc_address_1: "124 Oakbrook Lane", cc_city:"Las Vegas", cc_state:"NV", cc_postal_code: 98763, payment_status: "approved" }
+    cc_number: "1234567890123", cc_name: "Meowmers Bojangles", cc_exp: "Mon, 12 Jan -4712", cc_ccv: 123, cc_address_1: "124 Oakbrook Lane", cc_city:"Las Vegas", cc_state:"NV", cc_postal_code: 98763, payment_status: "approved",
+   }
 ]
 
 gifts.each do |gift|
@@ -22,7 +23,8 @@ end
 
 organizations = [
   { user_id: 1, name: "Helping Hands", contact_phone: "1234567890", population_served: "teens", annual_funding: 1200000, number_served: 60, shipping_address_1: "1234 Sherbrook Rd", shipping_city: "Seattle", shipping_state: "WA", shipping_postal_code: 98115, karma: 1, approval_status: "approved" },
-  { user_id: 2, name: "P Sherman Wallaby House", contact_phone: "9087654321", population_served: "women", annual_funding: 540000, number_served: 46, shipping_address_1: "456 Pickupstix Ave", shipping_city: "Seattle", shipping_state: "WA", shipping_postal_code: 98315, karma: 2, approval_status: "approved" }
+  { user_id: 2, name: "P Sherman Wallaby House", contact_phone: "9087654321", population_served: "women", annual_funding: 540000, number_served: 46, shipping_address_1: "456 Pickupstix Ave", shipping_city: "Seattle", shipping_state: "WA", shipping_postal_code: 98315, karma: 2, approval_status: "approved" },
+  { user_id: 4, name: "A Place to Rest", contact_phone: "9087657681", population_served: "all", annual_funding: 540000, number_served: 46, shipping_address_1: "12314 1st Ave", shipping_city: "Seattle", shipping_state: "WA", shipping_postal_code: 98315, karma: 3, approval_status: "approved" }
 ]
 
 organizations.each do |organization|
@@ -40,7 +42,10 @@ end
 
 users = [
   { username: "brenninja", email: "brenna@mail.com", password: "password", first_name: "Brenna", last_name: "Leker", donor: true },
-  { username: "bojangles", email: "meowcifer@mail.com", password: "password", first_name: "Meowmers", last_name: "Bojangles", donor: true }
+  { username: "bojangles", email: "meowcifer@mail.com", password: "password", first_name: "Meowmers", last_name: "Bojangles", donor: true },
+  { username: "mickey", email: "mickey@mail.com", password: "password", first_name: "Mickey", last_name: "Mouse", donor: true },
+  { username: "minnie", email: "mickey@mail.com", password: "password", first_name: "Minnie", last_name: "Mouse", donor: true },
+  { username: "donald", email: "donald@mail.com", password: "password", first_name: "Donald", last_name: "Duck", donor: true }
 ]
 
 users.each do |user|
@@ -49,7 +54,8 @@ end
 
 volunteers = [
   { user_id: 1, bio: "I'm awesome.", approval_status: "approved", role: "data wrangler" },
-  { user_id: 2, bio: "I'm even awesomer.", approval_status: "pending", role: "tech wiz" }
+  { user_id: 2, bio: "I'm even awesomer.", approval_status: "pending", role: "tech wiz" },
+  { user_id: 3, bio: "The awesomest.", approval_status: "pending", role: "data wrangler" }
 ]
 
 volunteers.each do |volunteer|

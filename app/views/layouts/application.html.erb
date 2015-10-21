@@ -10,18 +10,9 @@
 <body>
 <div class="container container-padding">
   <%= render partial: "shared/baseheader" %>
-  <% if @current_user %>
-    <% if Organization.find_by user_id: @current_user.id %>
-      <%= render partial: "shared/orgnav" %>
-    <% else %>
-      <%= render partial: "shared/baselogin" %>
-    <% end %>
-  <% else %>
-    <%= render partial: "shared/basenav" %>
-  <% end %>
+  <%= render partial: "shared/basenav" %>
 
-<%= yield %>
-
+  <%= yield %>
 </div>
 </body>
 </html>
