@@ -12,7 +12,7 @@
             <a class="dropdown-toggle" data-toggle="dropdown" href="#"><%= @current_user.username %>
             <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="#">Account</a></li>
+              <li><%= link_to 'Account', account_path(@current_user.username) %></li>
               <li><a href="#">Start a Project</a></li>
               <% if Organization.find_by user_id: @current_user.id %>
                 <li><a href="#">My Projects</a></li>

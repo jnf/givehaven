@@ -4,6 +4,12 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
+  def account
+    @user = @current_user
+    @volunteer = Volunteer.find_by(user_id: @current_user.id)
+    @organization = Organization.find_by(user_id: @current_user.id)
+  end
+
   def new
     @user = User.new(user_params[:user])
   end
@@ -18,6 +24,16 @@ class UsersController < ApplicationController
       raise
       redirect_to '/signup'
     end
+  end
+
+  def edit
+    @user = @current_user
+  end
+
+  def update
+    @user = @current_user
+    @user.update(user_params[:user])
+    redirect_to account_path(@user.username)
   end
 
   private

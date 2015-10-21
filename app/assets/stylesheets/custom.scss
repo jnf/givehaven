@@ -47,6 +47,34 @@ p {
   background-color: #fff;
 }
 
+// PROFILE
+.profile {
+  max-width: 40%;
+  margin: auto;
+  margin-bottom: 15px;
+  padding: 20px;
+  background-color: #fff;
+  border: 15px solid #F7F7F7;
+  border-radius: 10px;
+}
+
+.profile h1, .profile h2{
+  color: #4392f1;
+  margin-bottom: 15px;
+}
+
+.profile h1 {
+  margin-top: -10px;
+  font-size: 28px;
+}
+
+.profile h2 {
+  font-size: 20px;
+}
+
+.emphasis {
+  font-weight: 500;
+}
 
 // FORMS
 .center-form {
@@ -67,6 +95,10 @@ p {
   background-color: #2b84ef;
   color: #fff;
   border: 2px solid #fff;
+}
+
+.right-btn {
+  text-align: right;
 }
 
 .about {
