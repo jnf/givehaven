@@ -23,8 +23,7 @@ end
 
 organizations = [
   { user_id: 1, name: "Helping Hands", contact_phone: "1234567890", population_served: "teens", annual_funding: 1200000, number_served: 60, shipping_address_1: "1234 Sherbrook Rd", shipping_city: "Seattle", shipping_state: "WA", shipping_postal_code: 98115, karma: 1, approval_status: "approved" },
-  { user_id: 2, name: "P Sherman Wallaby House", contact_phone: "9087654321", population_served: "women", annual_funding: 540000, number_served: 46, shipping_address_1: "456 Pickupstix Ave", shipping_city: "Seattle", shipping_state: "WA", shipping_postal_code: 98315, karma: 2, approval_status: "approved" },
-  { user_id: 4, name: "A Place to Rest", contact_phone: "9087657681", population_served: "all", annual_funding: 540000, number_served: 46, shipping_address_1: "12314 1st Ave", shipping_city: "Seattle", shipping_state: "WA", shipping_postal_code: 98315, karma: 3, approval_status: "approved" }
+  { user_id: 2, name: "P Sherman Wallaby House", contact_phone: "9087654321", population_served: "women", annual_funding: 540000, number_served: 46, shipping_address_1: "456 Pickupstix Ave", shipping_city: "Seattle", shipping_state: "WA", shipping_postal_code: 98315, karma: 2, approval_status: "approved" }
 ]
 
 organizations.each do |organization|

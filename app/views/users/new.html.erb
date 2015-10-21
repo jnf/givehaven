@@ -3,32 +3,32 @@
 
     <div class="form-group">
       <%= f.label :username %>
-      <%= f.text_field :username, class: 'form-control' %>
+      <%= f.text_field :username, class: 'form-control', autofocus: true %>
     </div>
 
     <div class="form-group">
       <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control' %>
+      <%= f.email_field :email, class: 'form-control', autofocus: true %>
     </div>
 
     <div class="form-group">
       <%= f.label :first_name %>
-      <%= f.text_field :first_name, class: 'form-control' %>
+      <%= f.text_field :first_name, class: 'form-control', autofocus: true %>
     </div>
 
     <div class="form-group">
       <%= f.label :last_name %>
-      <%= f.text_field :last_name, class: 'form-control' %>
+      <%= f.text_field :last_name, class: 'form-control', autofocus: true %>
     </div>
 
     <div class="form-group">
       <%= f.label :password, 'Password' %>
-      <%= f.password_field :password, class: 'form-control' %>
+      <%= f.password_field :password, class: 'form-control', autofocus: true %>
     </div>
 
     <div class="form-group">
       <%= f.label :password_confirmation %>
-      <%= f.password_field :password_confirmation, class: 'form-control' %>
+      <%= f.password_field :password_confirmation, class: 'form-control', autofocus: true %>
     </div>
 
     <%= f.submit 'Signup', class: 'btn form-btn' %>

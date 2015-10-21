@@ -11,7 +11,6 @@ class OrganizationsController < ApplicationController
     else
       redirect_to new_organization_path
     end
-
   end
 
   def edit
@@ -31,7 +30,7 @@ class OrganizationsController < ApplicationController
   end
 
   def organization_params
-    params.permit(organization: [:name, :contact_phone, :number_served, :annual_funding, :approval_status, :shipping_address_1, :shipping_address_2, :shipping_city, :shipping_state, :shipping_postal_code])
+    params.permit(organization: [:name, :contact_phone, :number_served, :population_served, :annual_funding, :approval_status, :shipping_address_1, :shipping_address_2, :shipping_city, :shipping_state, :shipping_postal_code])
   end
 
 end
