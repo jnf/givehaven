@@ -32,7 +32,7 @@
       <h1>Volunteer Information</h1>
       <p><span class = "emphasis">Role:</span> <%= @volunteer.role %></p>
       <p><span class = "emphasis">Bio:</span> <%= @volunteer.bio %></p>
-      <p><span class = "emphasis">Status:</span> </p>
+      <p><span class = "emphasis">Status:</span> <%= @volunteer.approval_status %> </p>
       <%= link_to 'Edit', edit_volunteer_path(@current_user.username), class: 'right-btn' %>
   </div>
 <% end %>

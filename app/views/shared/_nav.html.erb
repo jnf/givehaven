@@ -20,10 +20,10 @@
               <% if @current_user.donor == true %>
                 <li><a href="#">Projects I've Funded</a></li>
               <% end %>
-              <% if Volunteer.find_by user_id:  @current_user.id %>
+              <% if (Volunteer.find_by user_id:  @current_user.id).approval_status == 'approved' %>
                 <li><a href="#">View Pending Projects</a></li>
               <% else %>
-                <li><a href="#">Volunteer!</a></li>
+                <li><%= link_to 'Volunteer!', new_volunteer_path %></li>
               <% end %>
             </ul>
           </li>

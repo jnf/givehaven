@@ -4,7 +4,6 @@ resources :users, except: [:new, :show, :edit]
 resources :sessions, only: [:create, :destroy]
 resources :volunteers, except: [:edit, :show]
 
-
   get '/login', to: 'sessions#new', as: 'login'
   get '/signup', to: 'users#new', as: 'signup'
   get 'account/:username', to: 'users#account', as: 'account'

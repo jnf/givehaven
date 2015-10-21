@@ -1,8 +1,17 @@
 class VolunteersController < ApplicationController
   def new
+    @volunteer = Volunteer.new(volunteer_params[:volunteer])
   end
 
   def create
+    @volunteer = Volunteer.create(volunteer_params[:volunteer])
+    @volunteer.user_id = @current_user.id
+    if @volunteer.save
+      redirect_to account_path(@current_user.username)
+    else
+      redirect_to new_volunteer_path
+    end
+
   end
 
   def edit
