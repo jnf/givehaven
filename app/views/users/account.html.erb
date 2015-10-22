@@ -6,10 +6,10 @@
     <p><span class = "emphasis">Last Name:</span> <%= @user.last_name %> </p>
   <%= link_to 'Edit', edit_user_path(@user.username), class: 'right-btn' %>
 </div>
-
 <% if Organization.find_by user_id: @current_user.id %>
   <div class = 'profile'>
       <h1><%= @organization.name %></h1>
+      <p><%=image_tag @organization.image %></p>
       <p> <span class = "emphasis">Phone:</span> <%= @organization.contact_phone %> </p>
       <p> <span class = "emphasis">Status:</span> <%= @organization.approval_status %> </p>
       <p><span class = "emphasis">Karma Points:</span> <%= @organization.karma %> </p>

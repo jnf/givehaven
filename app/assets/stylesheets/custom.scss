@@ -11,22 +11,27 @@ p {
   margin-bottom: 60px;
   padding: 20px;
   color: #4392f1;
-  font-size: 25px;
   letter-spacing: 1px;
   font-family: 'Cabin';
 }
 
 .brand li {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .brand a, .brand a:visited {
   color: #f14392;
   text-decoration: none;
+  margin-left: 110px;
+  margin-top: 30px;
+  position: absolute;
+  font-size: 30px;
 }
 
 .logo {
   width: 100px;
+  position: absolute;
+  z-index: -1;
 }
 
 // NAV BAR
@@ -35,6 +40,7 @@ p {
   color: #fff;
   font-size: 16px;
   letter-spacing: 1px;
+  position: relative;
 }
 
 .brand_nav a, .brand_nav a:visited {

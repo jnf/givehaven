@@ -7,13 +7,17 @@ class ApplicationController < ActionController::Base
     @current_user = User.find_by(id: session[:user_id])
   end
 
-  def authorize
-    redirect_to '/login' unless current_user
+  def logged_in
+    redirect_to login_path unless current_user
   end
 
   def total_shelters
     @organization_count = Organization.count
   end
+
+  # def authorize_user
+  #   redirect_to root_path unless @current_user.username == params[:username]
+  # end
 
   def total_volunteers
     @volunteer_count = Volunteer.count
