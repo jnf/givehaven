@@ -5,8 +5,18 @@ class SessionsController < ApplicationController
 
 	def create # logging in
 		if identify_user && authenticate
-			session[:user_id] = @user.id
-			redirect_to '/'
+			if user.activated?
+				session[:user_id] = @user.id
+				redirect_to '/'
+      else
+        message  = "Account not activated. "
+        message += "Check your email for the activation link."
+        flash[:warning] = message
+        redirect_to root_url
+      end
+    else
+      flash.now[:danger] = 'Invalid email/password combination'
+      render 'new'
 		end
 	end
 

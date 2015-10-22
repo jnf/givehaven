@@ -1,7 +1,7 @@
 gifts = [
   { user_id: 1, amount: 50,
-    cc_number: "123456789012334", cc_name: "Brenna Leker", cc_exp: "Mon, 12 Jan -4712", cc_ccv: 123, cc_address_1: "987 Cinder Ave", cc_city:"Bremerton", cc_state: "WA", cc_postal_code: 98312, payment_status: "approved", activated: true
-  }
+    cc_number: "123456789012334", cc_name: "Brenna Leker", cc_exp: "Mon, 12 Jan -4712", cc_ccv: 123, cc_address_1: "987 Cinder Ave", cc_city:"Bremerton", cc_state: "WA", cc_postal_code: 98312, payment_status: "approved"
+  },
   { user_id: 2, amount: 750,
     cc_number: "1234567890123", cc_name: "Meowmers Bojangles", cc_exp: "Mon, 12 Jan -4712", cc_ccv: 123, cc_address_1: "124 Oakbrook Lane", cc_city:"Las Vegas", cc_state:"NV", cc_postal_code: 98763, payment_status: "approved"
    }

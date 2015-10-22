@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 root 'home#index'
 resources :users, except: [:new, :show, :edit]
+resources :account_activations, only: [:edit]
 resources :sessions, only: [:create, :destroy]
 resources :volunteers, only: [:create, :update, :new, :index]
 resources :organizations, only: [:create, :update, :new, :index]
