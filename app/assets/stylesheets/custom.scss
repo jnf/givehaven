@@ -15,6 +15,10 @@ p {
   font-family: 'Cabin';
 }
 
+.brand ul {
+  list-style: none;
+}
+
 .brand li {
   font-size: 20px;
 }
@@ -83,6 +87,18 @@ p {
 
 .emphasis {
   font-weight: 500;
+}
+
+.green {
+  color: #43f1a2;
+}
+
+.pink {
+  color: #f14392;
+}
+
+.blue {
+
 }
 
 // FORMS
