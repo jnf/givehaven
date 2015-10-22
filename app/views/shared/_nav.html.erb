@@ -22,8 +22,10 @@
               <% else %>
                 <li><%= link_to 'Register your Organization', new_organization_path %></li>
               <% end %>
-              <% if (Volunteer.find_by user_id:  @current_user.id).approval_status == 'approved' %>
+              <% if Volunteer.find_by user_id:  @current_user.id %>
+                <% if (Volunteer.find_by user_id:  @current_user.id).approval_status == 'approved' %>
                 <li><a href="#">View Pending Projects</a></li>
+                <% end %>
               <% else %>
                 <li><%= link_to 'Volunteer!', new_volunteer_path %></li>
               <% end %>
