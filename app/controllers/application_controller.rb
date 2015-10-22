@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  before_action :current_user, :total_shelters, :total_donors, :total_projects, :total_donated
+  before_action :current_user, :total_shelters, :total_donors, :total_projects, :total_donated, :total_volunteers
 
   protect_from_forgery with: :exception
 
@@ -13,6 +13,10 @@ class ApplicationController < ActionController::Base
 
   def total_shelters
     @organization_count = Organization.count
+  end
+
+  def total_volunteers
+    @volunteer_count = Volunteer.count
   end
 
   def total_donors

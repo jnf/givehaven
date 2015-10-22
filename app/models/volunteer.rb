@@ -4,5 +4,6 @@ class Volunteer < ActiveRecord::Base
 
   #---------------validations----------------------
   validates :bio, :approval_status, :role, presence: true
+  validates :user_id, uniqueness: true
 
 end
