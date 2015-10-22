@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 20151020181959) do
   create_table "organizations", force: :cascade do |t|
     t.integer  "user_id"
     t.string   "name"
+    t.string   "image"
     t.string   "contact_phone"
     t.string   "population_served"
     t.integer  "annual_funding"
@@ -64,6 +65,7 @@ ActiveRecord::Schema.define(version: 20151020181959) do
   create_table "projects", force: :cascade do |t|
     t.integer  "organization_id"
     t.string   "title"
+    t.string   "image"
     t.text     "description"
     t.string   "project_approval", default: "pending"
     t.string   "funding_status",   default: "not funded"

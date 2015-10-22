@@ -7,4 +7,8 @@ class Organization < ActiveRecord::Base
   validates :user_id, uniqueness: true
   validates :shipping_postal_code, length: { is: 5 }
   validates :contact_phone, length: { is: 10 }
+
+  #---------------uploaders-------------------------
+  mount_uploader :image, ImageUploader
+
 end

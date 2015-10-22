@@ -3,6 +3,7 @@ class CreateOrganizations < ActiveRecord::Migration
     create_table :organizations do |t|
       t.integer :user_id
       t.string :name
+      t.string :image
       t.string :contact_phone
       t.string :population_served
       t.integer :annual_funding

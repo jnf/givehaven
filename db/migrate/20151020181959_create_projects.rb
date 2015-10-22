@@ -3,6 +3,7 @@ class CreateProjects < ActiveRecord::Migration
     create_table :projects do |t|
       t.integer :organization_id
       t.string :title
+      t.string :image
       t.text :description
       t.string :project_approval, default: 'pending'
       t.string :funding_status, default: 'not funded'
