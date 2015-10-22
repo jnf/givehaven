@@ -4,10 +4,10 @@ class SessionsController < ApplicationController
 	end
 
 	def create # logging in
-		if identify_user && authenticate
-			if user.activated?
+    if identify_user && @user.authenticate(params[:session][:password])
+      if @user.activated?
 				session[:user_id] = @user.id
-				redirect_to '/'
+				redirect_to root_url
       else
         message  = "Account not activated. "
         message += "Check your email for the activation link."
@@ -17,8 +17,8 @@ class SessionsController < ApplicationController
     else
       flash.now[:danger] = 'Invalid email/password combination'
       render 'new'
-		end
-	end
+    end
+  end
 
    def destroy
      session[:user_id] = nil
@@ -43,7 +43,7 @@ class SessionsController < ApplicationController
 			return true
 		else
 			flash[:error] = "Sorry, your username or password did not match our records."
-			redirect_to sessions_path
+			redirect_to login_path
 			return
 		end
 	end

@@ -19,12 +19,10 @@ before_action :logged_in, only: [:account, :edit]
   def create
     @user = User.create(user_params[:user])
     if @user.save
-      session[:user_id] = @user.id
       @user.send_activation_email
       flash[:info] = "Please check your email to activate your account."
       redirect_to root_path
     else
-      raise
       redirect_to signup_path
     end
   end
