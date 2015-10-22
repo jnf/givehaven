@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::Base
   before_action :current_user, :total_shelters, :total_donors, :total_projects, :total_donated, :total_volunteers
-
   protect_from_forgery with: :exception
 
   def current_user
@@ -38,5 +37,4 @@ class ApplicationController < ActionController::Base
       @approved_gift_total += gift.amount
     end
   end
-
 end

@@ -11,7 +11,6 @@ class VolunteersController < ApplicationController
     else
       redirect_to new_volunteer_path
     end
-
   end
 
   def edit
@@ -33,5 +32,4 @@ class VolunteersController < ApplicationController
   def volunteer_params
     params.permit(volunteer: [:role, :bio, :approval_status])
   end
-
 end

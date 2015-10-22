@@ -32,5 +32,4 @@ class OrganizationsController < ApplicationController
   def organization_params
     params.permit(organization: [:name, :contact_phone, :image, :number_served, :population_served, :annual_funding, :approval_status, :shipping_address_1, :shipping_address_2, :shipping_city, :shipping_state, :shipping_postal_code])
   end
-
 end
