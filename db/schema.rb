@@ -72,7 +72,7 @@ ActiveRecord::Schema.define(version: 20151020181959) do
     t.string   "shipping_status",  default: "awaiting project completion"
     t.float    "total"
     t.text     "essay"
-    t.date     "expires_on",       default: '2016-01-21'
+    t.date     "expires_on",       default: '2016-01-22'
     t.datetime "created_at",                                               null: false
     t.datetime "updated_at",                                               null: false
   end
@@ -83,9 +83,11 @@ ActiveRecord::Schema.define(version: 20151020181959) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "password_digest"
-    t.boolean  "donor",           default: false
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
+    t.string   "activation_digest"
+    t.boolean  "activated"
+    t.boolean  "donor",             default: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
   end
 
   create_table "volunteers", force: :cascade do |t|

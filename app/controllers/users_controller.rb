@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
 # before_action :authorize_user, only: [:account, :edit]
+before_create :create_activation_digest
+before_save :downcase_email
 before_action :logged_in, only: [:account, :edit]
+
   def index
     @users = User.all
   end
@@ -67,6 +70,15 @@ before_action :logged_in, only: [:account, :edit]
 
   def set_organization
     @organization = Organization.find_by(user_id: @current_user.id)
+  end
+
+  def create_activation_digest
+    self.activation_token  = User.new_token
+    self.activation_digest = User.digest(activation_token)
+  end
+
+  def downcase_email
+    self.email = email.downcase
   end
 
   def user_params

@@ -1,25 +1,25 @@
-<div class = 'brand'>
+<div class = 'brand blue'>
 	<div class = 'col-sm-4'>
 		<%= image_tag 'logo_no_bg.png', class: 'logo' %>
-		<%= link_to 'GiveHaven.org', root_path %>
+		<%= link_to 'GiveHaven.org', root_path, class: 'pink' %>
 	</div>
 	<div class = 'col-sm-3'>
 		<ul>
 			<li>
-				<span class = "pink">♥ </span><%= @organization_count %> Shelters
+				<span class = 'pink'>♥ </span><%= @organization_count %> Shelters
 			</li>
 			<li>
-				<span class = "pink">♥ </span> <%= @approved_project_count %> Projects
+				<span class = 'pink'>♥ </span> <%= @approved_project_count %> Projects
 			</li>
 		</ul>
 	</div>
 	<div class = 'col-sm-3'>
 		<ul>
 			<li>
-				<span class = "pink">♥ </span> <%= @donor_count %> Donors
+				<span class = 'pink'>♥ </span> <%= @donor_count %> Donors
 			</li>
 			<li>
-			<span class = "pink">♥ </span>	$<%= @approved_gift_total %> given
+			<span class = 'pink'>♥ </span>	$<%= @approved_gift_total %> given
 			</li>
 		</ul>
 	</div>

@@ -10,7 +10,6 @@ p {
 .brand {
   margin-bottom: 60px;
   padding: 20px;
-  color: #4392f1;
   letter-spacing: 1px;
   font-family: 'Cabin';
 }
@@ -24,7 +23,6 @@ p {
 }
 
 .brand a, .brand a:visited {
-  color: #f14392;
   text-decoration: none;
   margin-left: 110px;
   margin-top: 30px;
@@ -52,12 +50,8 @@ p {
   background-color: #4392f1;
 }
 
-.brand_nav ul li a:hover, .brand_nav ul li a:hover{
+.brand_nav ul li a:hover, .brand_nav ul li a:active{
   background-color: #72ADF5;
-}
-
-.active ul li a {
-  background-color: #fff;
 }
 
 // PROFILE
@@ -98,7 +92,11 @@ p {
 }
 
 .blue {
+color: #4392f1;
+}
 
+.orange {
+color: #f1a243;
 }
 
 // FORMS
