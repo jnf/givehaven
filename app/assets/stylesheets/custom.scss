@@ -22,12 +22,13 @@ p {
   font-size: 20px;
 }
 
-.brand a, .brand a:visited {
+.brand a, .brand a:visited, .brand a:hover {
   text-decoration: none;
   margin-left: 110px;
   margin-top: 30px;
   position: absolute;
   font-size: 30px;
+  color: #f14392;
 }
 
 .logo {

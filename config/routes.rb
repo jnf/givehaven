@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   #account activations
   resources :account_activations, only: [:edit]
 
+  #charges
+  resources :charges
+  
   #home
   get '/about', to: 'home#about', as: 'about'
   get '/how_it_works', to: 'home#how_it_works', as: 'how_it_works'
