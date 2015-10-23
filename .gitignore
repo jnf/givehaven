@@ -19,5 +19,6 @@
 coverage
 dstore
 
-# Ignore Amazon secrets
+# Ignore secrets
 /config/initializers/s3.rb
+.env

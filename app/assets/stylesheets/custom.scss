@@ -66,6 +66,13 @@ p {
   border-radius: 10px;
 }
 
+.profile img {
+  max-width: 25%;
+  border-radius: 10px;
+  float: left;
+  margin: 5px 20px 5px 0;
+}
+
 .profile h1, .profile h2{
   color: #4392f1;
   margin-bottom: 15px;
