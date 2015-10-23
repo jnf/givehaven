@@ -1,5 +1,5 @@
 <div class = 'form center-form'>
-  <%= form_for @project, url: project_path,  multipart: true do |f| %>
+  <%= form_for @project, url: project_path(@project.id),  multipart: true do |f| %>
     <div class="form-group">
       <%= f.label "Title:" %>
       <%= f.text_field :title, class: 'form-control', autofocus: true  %>
@@ -16,21 +16,31 @@
       <%= f.file_field :image, autofocus: true %>
     </div>
     <div class="form-group">
-      <%= f.label "Essay:" %>
-      <p>Please write at least 250 words describing your project. Be sure to answer the following quesiton:</p>
+      <%= f.label "About #{@organization.name}:" %>
+      <p>Please write at least 250 words describing your organization. Be sure to answer the following quesitons:</p>
       <ul>
         <li>
           Who do you work with(population served description)?
         </li>
         <li>
-          How will the items be used/benefit your population?
-        </li>
-        <li>
           What does a typical day at <%= @organization.name %> look like?
         </li>
       </ul>
-      <%= f.text_area :essay, class: 'form-control', autofocus: true  %>
+      <%= f.text_area :organization_details, class: 'form-control', autofocus: true  %>
     </div>
-    <%= f.submit 'Edit Project', class: 'btn form-btn' %>
+    <div class="form-group">
+      <%= f.label "Project Details:" %>
+      <p>Please write at least 250 words describing your project. Be sure to answer the following quesitons:</p>
+      <ul>
+        <li>
+          How will the items requested be used?
+        </li>
+        <li>
+          What impact will this project have on your population?
+        </li>
+      </ul>
+      <%= f.text_area :project_details, class: 'form-control', autofocus: true  %>
+    </div>
+    <%= f.submit 'Edit Project Request', class: 'btn form-btn' %>
   <% end %>
 </div>

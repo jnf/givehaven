@@ -8,7 +8,9 @@ class CreateProjects < ActiveRecord::Migration
       t.string :project_approval, default: 'pending'
       t.string :funding_status, default: 'not funded'
       t.string :shipping_status, default: 'awaiting project completion'
-      t.float :total
+      t.float :total_donated, default: 0
+      t.float :total_remaining
+      t.float :total_requested
       t.text :organization_details
       t.text :project_details
       t.date :expires_on, default: Date.today + 3.month

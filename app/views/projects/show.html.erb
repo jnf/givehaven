@@ -1,0 +1,23 @@
+<div class = 'project'>
+  <div class = 'project-top'>
+    <div class = 'col-sm-4 project-img'>
+      <%= image_tag @project.image %>
+    </div>
+    <div class = 'col-sm-8 project-title'>
+      <h1 class ='pink'><%= @project.title %></h1>
+    </div>
+    <div class = 'col-sm-4 project-title'>
+      <p><span class = 'emphasis'>Organization: </span><%= @organization.name %></h3>
+      <p><span class = 'emphasis'>Population served: </span><%= @organization.population_served %></h3>
+    </div>
+    <div class = 'col-sm-4 project-title'>
+      <p><span class = 'emphasis'>Location: </span>
+      <%= @organization.shipping_city %>, <%= @organization.shipping_state %></p>
+    </div>
+  </div>
+  <div class = 'thick-line'></div>
+  <h3 class = 'pink'>Our Organization</h3>
+  <p><%= @project.organization_details %></p>
+  <h3 class = 'pink'>Our Project</h3>
+  <p><%= @project.project_details %></p>
+</div>

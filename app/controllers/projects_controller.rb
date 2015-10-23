@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-before_action :logged_in, except: [:index]
+before_action :logged_in, except: [:index, :show]
 
   def index
     @projects = Project.all
@@ -10,12 +10,8 @@ before_action :logged_in, except: [:index]
     @projects = Project.where(organization_id: @organization.id)
   end
 
-  # def show
-  #   @project = Project.find(params[:title])
-  # end
-
-  def edit
-    locate_project
+  def show
+    @project = Project.find(params[:id])
     locate_organization
   end
 
@@ -31,15 +27,25 @@ before_action :logged_in, except: [:index]
     if @project.save
       redirect_to my_projects_path(@current_user.username)
     else
-      raise
       redirect_to new_project_path
     end
+  end
+
+  def edit
+    locate_project
+    locate_organization
+  end
+
+  def update
+    @project = Project.find(params[:id])
+    @project.update(project_params[:project])
+    redirect_to my_projects_path(@current_user.username)
   end
 
   private
 
   def locate_project
-    @project = Project.find(params[:title])
+    @project = Project.find_by(title: params[:title])
   end
 
   def locate_organization

@@ -103,6 +103,41 @@ color: #f1a243;
   text-align: center;
 }
 
+.txt-right {
+  text-align: right;
+}
+
+.project {
+  max-width: 80%;
+  margin: auto;
+  padding: 10px;
+  border: solid 8px #F7F7F7;
+  border-radius: 10px;
+}
+
+.thick-line {
+  max-width: 100%;
+  border-top: solid 8px #F7F7F7;
+}
+
+.project img {
+  max-width: 200px;
+  max-height: 150px;
+}
+
+.project-img {
+  height: 150px;
+}
+
+.project-top {
+  padding: 10px;
+  height: 175px;
+}
+
+.project-title {
+height: 75px;
+}
+
 .tile {
   margin: auto;
   padding: 10px;
@@ -126,6 +161,7 @@ color: #f1a243;
 .tile h3 {
   font-size: 18px;
 }
+
 
 // FORMS
 .center-form {

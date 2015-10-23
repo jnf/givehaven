@@ -1,12 +1,16 @@
 <h1 class = "pink txt-center">Your Projects</h1>
 
-
 <% @projects.each do |project| %>
 <div class='col-sm-4'>
-  <div class = 'tile'>
-    <%= image_tag project.image %>
-    <h2 class = "blue"><%= project.title %></h2>
-    <h3 class = "blue">Status: <%= project.funding_status %></h3>
-  </div>
+  <a href = '/projects/<%= project.title %>/<%= project.id  %>'>
+    <div class = 'tile'>
+      <%= image_tag project.image %>
+      <h2 class = "blue"><%= project.title %></h2>
+      <h3 class = "blue">Status: <%= project.funding_status %></h3>
+      <p>project completion bar</p>
+      <p class = 'txt-right'><%= link_to 'Edit', edit_project_path(project.title, project.id) %></p>
+    </div>
+  </a>
+
 </div>
 <% end %>

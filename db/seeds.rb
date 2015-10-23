@@ -45,10 +45,10 @@ end
 
 projects = [
   {
-    organization_id: 1, title: "oral hygiene", description: "oral hygiene", project_approval: "approved", funding_status: "funded", shipping_status: "shipped", total: 1425, organization_details: 'we help people', project_details: "oral hygiene", expires_on: "Mon, 12 Jan -4712"
+    organization_id: 1, title: "oral hygiene", description: "oral hygiene", project_approval: "approved", funding_status: "not funded", shipping_status: "shipped", total_requested: 1425, total_donated: 740, total_remaining: 685, organization_details: 'we help people', project_details: "oral hygiene", expires_on: "Mon, 12 Jan -4712"
   },
   {
-    organization_id: 2, title: "winter warmth", description: "winter warmth", project_approval: "approved", funding_status: "funded", shipping_status: "pending", total: 1200, organization_details: 'we do stuff', project_details: "winter warmth", expires_on: "Mon, 12 Jan -4712"
+    organization_id: 2, title: "winter warmth", description: "winter warmth", project_approval: "approved", funding_status: "funded", shipping_status: "pending", total_requested: 1200, total_remaining: 0, total_donated: 1200, organization_details: 'we do stuff', project_details: "winter warmth", expires_on: "Mon, 12 Jan -4712"
   }
 ]
 
