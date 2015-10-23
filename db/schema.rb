@@ -67,14 +67,15 @@ ActiveRecord::Schema.define(version: 20151020181959) do
     t.string   "title"
     t.string   "image"
     t.text     "description"
-    t.string   "project_approval", default: "pending"
-    t.string   "funding_status",   default: "not funded"
-    t.string   "shipping_status",  default: "awaiting project completion"
+    t.string   "project_approval",     default: "pending"
+    t.string   "funding_status",       default: "not funded"
+    t.string   "shipping_status",      default: "awaiting project completion"
     t.float    "total"
-    t.text     "essay"
-    t.date     "expires_on",       
-    t.datetime "created_at",                                               null: false
-    t.datetime "updated_at",                                               null: false
+    t.text     "organization_details"
+    t.text     "project_details"
+    t.date     "expires_on",           default: '2016-01-23'
+    t.datetime "created_at",                                                   null: false
+    t.datetime "updated_at",                                                   null: false
   end
 
   create_table "users", force: :cascade do |t|

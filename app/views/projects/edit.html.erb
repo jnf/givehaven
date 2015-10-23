@@ -1,0 +1,36 @@
+<div class = 'form center-form'>
+  <%= form_for @project, url: project_path,  multipart: true do |f| %>
+    <div class="form-group">
+      <%= f.label "Title:" %>
+      <%= f.text_field :title, class: 'form-control', autofocus: true  %>
+    </div>
+    <div class="form-group">
+      <%= f.label "Brief description:" %>
+      <p>
+        Please write 1-2 sentences describing your project.
+      </p>
+      <%= f.text_area :description, class: 'form-control', autofocus: true  %>
+    </div>
+    <div class="form-group">
+      <%= f.label "Photo:" %>
+      <%= f.file_field :image, autofocus: true %>
+    </div>
+    <div class="form-group">
+      <%= f.label "Essay:" %>
+      <p>Please write at least 250 words describing your project. Be sure to answer the following quesiton:</p>
+      <ul>
+        <li>
+          Who do you work with(population served description)?
+        </li>
+        <li>
+          How will the items be used/benefit your population?
+        </li>
+        <li>
+          What does a typical day at <%= @organization.name %> look like?
+        </li>
+      </ul>
+      <%= f.text_area :essay, class: 'form-control', autofocus: true  %>
+    </div>
+    <%= f.submit 'Edit Project', class: 'btn form-btn' %>
+  <% end %>
+</div>
