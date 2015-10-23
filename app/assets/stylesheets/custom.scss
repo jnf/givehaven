@@ -132,8 +132,15 @@ color: #f1a243;
 .about {
   width: 50%;
   margin: auto;
-  margin-top: 25px;
+  margin-top: 35px;
   line-height: 1.5;
+}
+
+.about img {
+  max-width: 45%;
+  float: left;
+  margin: 15px;
+  border-radius: 10px;
 }
 
 .container-padding {

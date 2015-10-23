@@ -72,7 +72,7 @@ ActiveRecord::Schema.define(version: 20151020181959) do
     t.string   "shipping_status",  default: "awaiting project completion"
     t.float    "total"
     t.text     "essay"
-    t.date     "expires_on",       default: '2016-01-22'
+    t.date     "expires_on",       
     t.datetime "created_at",                                               null: false
     t.datetime "updated_at",                                               null: false
   end

@@ -1,12 +1,12 @@
 class SessionsController < ApplicationController
 
-	def new
-	end
+  def new
+  end
 
 	def create # logging in
     if identify_user && @user.authenticate(params[:session][:password])
       if @user.activated?
-				session[:user_id] = @user.id
+			  session[:user_id] = @user.id
 				redirect_to root_url
       else
         message  = "Account not activated. "
@@ -20,10 +20,10 @@ class SessionsController < ApplicationController
     end
   end
 
-   def destroy
-     session[:user_id] = nil
-     redirect_to '/'
-   end
+  def destroy
+    session[:user_id] = nil
+    redirect_to '/'
+  end
 
 	private
 

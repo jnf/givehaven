@@ -14,10 +14,6 @@ class ApplicationController < ActionController::Base
     @organization_count = Organization.count
   end
 
-  # def authorize_user
-  #   redirect_to root_path unless @current_user.username == params[:username]
-  # end
-
   def total_volunteers
     @volunteer_count = Volunteer.count
   end
