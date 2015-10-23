@@ -29,8 +29,9 @@ before_action :logged_in, except: [:index]
     @project = Project.create(project_params[:project])
     @project.organization_id = @organization.id
     if @project.save
-      redirect_to account_path(@current_user.username)
+      redirect_to my_projects_path(@current_user.username)
     else
+      raise
       redirect_to new_project_path
     end
   end
@@ -46,6 +47,6 @@ before_action :logged_in, except: [:index]
   end
 
   def project_params
-    params.permit(project: [:title, :description, :essay, :image, :user_id, :ammount])
+    params.permit(project: [:title, :description, :project_details, :organization_details, :image, :user_id, :ammount])
   end
 end

@@ -7,5 +7,8 @@ class Project < ActiveRecord::Base
   validates :title, :description, :project_approval, :funding_status, :shipping_status, :project_details, :organization_details, :expires_on, presence: true
 
   validates :description, length: { maximum: 250 }
-  validates :project_details, :organization_details, length: { minimum: 250 }
+  # validates :project_details, :organization_details, length: { minimum: 250 }
+
+  #---------------uploaders-------------------------
+  mount_uploader :image, ImageUploader
 end

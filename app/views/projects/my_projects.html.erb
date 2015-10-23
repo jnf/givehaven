@@ -1,5 +1,12 @@
-your Projects
+<h1 class = "pink txt-center">Your Projects</h1>
+
 
 <% @projects.each do |project| %>
-  <%=  project.title %>
+<div class='col-sm-4'>
+  <div class = 'tile'>
+    <%= image_tag project.image %>
+    <h2 class = "blue"><%= project.title %></h2>
+    <h3 class = "blue">Status: <%= project.funding_status %></h3>
+  </div>
+</div>
 <% end %>

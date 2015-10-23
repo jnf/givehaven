@@ -99,6 +99,34 @@ color: #4392f1;
 color: #f1a243;
 }
 
+.txt-center {
+  text-align: center;
+}
+
+.tile {
+  margin: auto;
+  padding: 10px;
+  max-width: 90%;
+  height: 250px;
+  border: solid 10px #F7F7F7;
+  border-radius: 10px;
+}
+
+.tile img {
+  max-width: 150px;
+  max-height: 150px;
+  padding: 10px;
+  float: left;
+}
+
+.tile h2 {
+  font-size: 24px;
+}
+
+.tile h3 {
+  font-size: 18px;
+}
+
 // FORMS
 .center-form {
   max-width: 40%;

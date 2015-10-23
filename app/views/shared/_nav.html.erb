@@ -15,7 +15,9 @@
               <li><%= link_to 'Account', account_path(@current_user.username) %></li>
               <% if Organization.find_by user_id: @current_user.id %>
                 <li><%= link_to 'My Projects', my_projects_path(@current_user.username) %></li>
-                <li><%= link_to 'Start a New Project', new_project_path %></li>
+                <% if (Organization.find_by user_id:  @current_user.id).karma > 0 %>
+                  <li><%= link_to 'Start a New Project', new_project_path %></li>
+                <% end %>
               <% else %>
                 <li><%= link_to 'Register your Organization', new_organization_path %></li>
               <% end %>
