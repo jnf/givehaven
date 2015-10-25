@@ -17,4 +17,5 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require rails.validations
+//= require jquery.slick
 //= require_tree .
