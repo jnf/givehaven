@@ -1,5 +1,5 @@
 <div class = 'form center-form'>
-  <%= form_for @volunteer, url: volunteer_path(@current_user.id) do |f| %>
+  <%= form_for @volunteer, url: volunteer_path(@current_user.id), validate: true do |f| %>
     <fieldset>
       <legend>Role: </legend>
       <div class="form-group">

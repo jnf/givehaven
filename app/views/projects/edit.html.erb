@@ -1,5 +1,5 @@
 <div class = 'form center-form'>
-  <%= form_for @project, url: project_path(@project.id),  multipart: true do |f| %>
+  <%= form_for @project, url: project_path(@project.id), validate: true, multipart: true do |f| %>
     <div class="form-group">
       <%= f.label "Title:" %>
       <%= f.text_field :title, class: 'form-control', autofocus: true  %>

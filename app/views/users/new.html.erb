@@ -1,5 +1,5 @@
 <div class = 'form center-form'>
-  <%= form_for @user do |f| %>
+  <%= form_for @user, validate: true do |f| %>
 
     <div class="form-group">
       <%= f.label :username %>

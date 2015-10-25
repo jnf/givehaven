@@ -1,11 +1,12 @@
 <div class = 'form center-form'>
-  <%= form_for @organization, url: organization_path(@current_user.id), multipart: true do |f| %>
+  <%= form_for @organization, url: organization_path(@current_user.id), validate: true, multipart: true do |f| %>
     <div class="form-group">
       <%= f.label "Name:" %>
       <%= f.text_field :name, class: 'form-control', autofocus: true  %>
     </div>
     <div class="form-group">
       <%= f.label "Contact Phone:" %>
+      <p>no special characters, ex: 5091234567</p>
       <%= f.telephone_field :contact_phone, class: 'form-control', autofocus: true  %>
     </div>
     <div class="form-group">
