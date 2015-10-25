@@ -8,14 +8,5 @@ RSpec.describe User, type: :model do
       expect(user2).to_not be_valid
       expect(user2.errors.keys).to include(:username)
     end
-
-    it "requires a unique username and email address" do
-      user = FactoryGirl.build(:user)
-      user2 = User.create(username: 'waffleluv', email: "Leslie@email.com", last_name: 'Wyatt', first_name: 'Ben', password: 'conesofdunshire')
-
-      expect(user2).to_not be_valid
-      expect(user2.errors.keys).to include(:username, :email)
-      expect(User.count).to eq 1
-    end
   end
 end
