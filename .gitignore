@@ -23,3 +23,8 @@ dstore
 /config/initializers/s3.rb
 /config/initializers/stripe.rb
 .env
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
