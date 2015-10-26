@@ -8,7 +8,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'bootstrap-sass'
 gem 'bcrypt'
-gem 'pg'
 gem 'client_side_validations', github: 'DavyJonesLocker/client_side_validations'
 gem 'carrierwave-aws'
 gem 'mini_magick'
@@ -34,4 +33,9 @@ group :development do
   gem 'binding_of_caller'
   gem 'pry-rails'
   gem 'spring'
+end
+
+
+group :production do
+  gem 'pg'
 end
