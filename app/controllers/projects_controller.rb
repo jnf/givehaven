@@ -13,6 +13,8 @@ before_action :logged_in, except: [:index, :show]
   def show
     @project = Project.find(params[:id])
     locate_organization
+    @percent_complete = (@project.total_donated/@project.total_requested*100).ceil
+    @percent_remaining = 100 - @percent_complete
   end
 
   def new

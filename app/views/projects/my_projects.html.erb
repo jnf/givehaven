@@ -7,7 +7,14 @@
       <%= image_tag project.image %>
       <h2 class = "blue"><%= project.title %></h2>
       <h3 class = "blue">Status: <%= project.funding_status %></h3>
-      <p>project completion bar</p>
+      <div class = 'progress'>
+        <div class = 'progress-bar-stiped progress-bar blue-bar' role="progressbar" style="width: 50%">
+          $<%= project.total_donated %> raised!
+        </div>
+        <div class = 'progress-bar-striped progress-bar blue-bar' role="progressbar" style="width: 50%">
+          Only $<%= project.total_remaining %> to go!
+        </div>
+      </div>
       <p class = 'txt-right'><%= link_to 'Edit', edit_project_path(project.title, project.id) %></p>
     </div>
   </a>

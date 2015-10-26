@@ -100,11 +100,15 @@ p {
 }
 
 .blue {
-color: #4392f1;
+  color: #4392f1;
 }
 
 .orange {
-color: #f1a243;
+  color: #f1a243;
+}
+
+.grey {
+  color: #F7F7F7;
 }
 
 .txt-center {
@@ -150,6 +154,10 @@ height: 75px;
   max-width: 25px;
   max-height: 25px;
 
+}
+
+.blue-bar {
+  background-color: #4392f1;
 }
 
 .tile {
@@ -223,4 +231,14 @@ height: 75px;
 
 .container-padding {
   margin-bottom: 50px;
+}
+
+.slider {
+  width:600px;
+  margin:20px auto;
+  text-align:center;
+}
+
+.test {
+  background-color: blue;
 }

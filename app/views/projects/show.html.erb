@@ -13,6 +13,15 @@
     <div class = 'col-sm-4 project-title'>
       <p><span class = 'emphasis'>Location: <%= image_tag 'location.png' %></span>
       <%= @organization.shipping_city %>, <%= @organization.shipping_state %></p>
+      <p><span class = 'emphasis'>Status: </span>$<%=  @project.total_donated%> raised!</p>
+    </div>
+  </div>
+  <div class = 'progress'>
+    <div class = 'progress-bar-stiped progress-bar blue-bar' role="progressbar" style="width:<%= @percent_complete %>%">
+      $<%= @project.total_donated %> raised!
+    </div>
+    <div class = 'progress-bar-striped progress-bar blue-bar' role="progressbar" style="width:<%= @percent_remaining %>%">
+      Only $<%= @project.total_remaining %> to go!
     </div>
   </div>
   <div class = 'thick-line'></div>
