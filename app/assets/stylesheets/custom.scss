@@ -273,7 +273,7 @@ height: 75px;
 
 .slide-tile {
   width: 30%;
-  height: 200px;
+  height: 225px;
   margin: 10px;
   border: 4px solid #4392f1;
 }
@@ -282,9 +282,13 @@ height: 75px;
   text-decoration: none;
 }
 
-
 .slide-tile img {
   max-width: 100px;
+  max-height: 75px;
   float: left;
-  margin-left: 10px;
+  margin: 10px;
+}
+
+.image-container {
+  height: 100px;
 }
