@@ -6,7 +6,7 @@ before_action :logged_in, except: [:index, :show]
   end
 
   def my_projects
-    locate_organization
+    locate_my_organization
     @projects = Project.where(organization_id: @organization.id)
   end
 
@@ -19,11 +19,11 @@ before_action :logged_in, except: [:index, :show]
 
   def new
     @project = Project.new(project_params[:project])
-    locate_organization
+    locate_my_organization
   end
 
   def create
-    locate_organization
+    locate_my_organization
     @project = Project.create(project_params[:project])
     @project.organization_id = @organization.id
     @project.expires_on = DateTime.now + 3.month
@@ -51,8 +51,12 @@ before_action :logged_in, except: [:index, :show]
     @project = Project.find_by(title: params[:title])
   end
 
-  def locate_organization
+  def locate_my_organization
     @organization = Organization.find_by(user_id: @current_user.id)
+  end
+
+  def locate_organization
+    @organization = Organization.find_by(id: @project.organization_id)
   end
 
   def project_params

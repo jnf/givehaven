@@ -1,13 +1,13 @@
-<div class = 'profile'>
+<div class = 'col-md-5 profile'>
     <h1>Account Information</h1>
     <p><span class = "emphasis">Username:</span> <%= @user.username %> </p>
     <p><span class = "emphasis">Email:</span> <%= @user.email %> </p>
     <p><span class = "emphasis">First Name:</span> <%= @user.first_name %> </p>
     <p><span class = "emphasis">Last Name:</span> <%= @user.last_name %> </p>
-  <%= link_to 'Edit', edit_user_path(@user.username), class: 'right-btn' %>
+    <%= link_to 'Edit', edit_user_path(@user.username), class: 'txt-right' %>
 </div>
 <% if Organization.find_by user_id: @current_user.id %>
-  <div class = 'profile'>
+  <div class = 'col-md-5 profile'>
       <h1><%= @organization.name %></h1>
       <p><%=image_tag @organization.image %></p>
       <p> <span class = "emphasis">Phone:</span> <%= @organization.contact_phone %> </p>
@@ -16,7 +16,7 @@
       <p><span class = "emphasis">Population Served:</span> <%= @organization.population_served %></p>
       <p><span class = "emphasis">Number of People Served Annualy:</span> <%= @organization.number_served %> </p>
       <p><span class = "emphasis">Annual Funding Recieved:</span> <%= @organization.annual_funding %> </p>
-      <%= link_to 'Edit', edit_organization_path(@organization.name), class: 'right-btn' %>
+      <%= link_to 'Edit', edit_organization_path(@organization.name), class: 'txt-right' %>
       <p></p>
       <h2>Shipping Information</h2>
       <p><span class = "emphasis">Address 1:</span> <%= @organization.shipping_address_1 %></p>
@@ -24,15 +24,16 @@
       <p><span class = "emphasis">City:</span> <%= @organization.shipping_city %> </p>
       <p><span class = "emphasis">State:</span> <%= @organization.shipping_state %> </p>
       <p><span class = "emphasis">Zip Code:</span> <%= @organization.shipping_postal_code %></p>
-      <%= link_to 'Edit', edit_organization_path(@organization.name), class: 'right-btn' %>
+      <%= link_to 'Edit', edit_organization_path(@organization.name), class: 'txt-right' %>
   </div>
 <% end %>
+
 <% if Volunteer.find_by user_id: @current_user.id %>
-  <div class = 'profile'>
+  <div class = 'col-md-5 profile'>
       <h1>Volunteer Information</h1>
       <p><span class = "emphasis">Role:</span> <%= @volunteer.role %></p>
       <p><span class = "emphasis">Bio:</span> <%= @volunteer.bio %></p>
       <p><span class = "emphasis">Status:</span> <%= @volunteer.approval_status %> </p>
-      <%= link_to 'Edit', edit_volunteer_path(@current_user.username), class: 'right-btn' %>
+      <%= link_to 'Edit', edit_volunteer_path(@current_user.username), class: 'txt-right' %>
   </div>
 <% end %>
