@@ -6,4 +6,8 @@ module ProjectsHelper
   def percent_remaining(project)
     100 - percent_complete(project)
   end
+
+  def days_remaining(project)
+    (project.expires_on - Time.zone.now).to_i / 1.day
+  end
 end
