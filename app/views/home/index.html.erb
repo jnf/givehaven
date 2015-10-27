@@ -1,7 +1,6 @@
 <h3 class = 'blue'>Ending Soon</h3>
-
 <div class='slider'>
-  <% @projects.each do |project| %>
+  <% @ending_soon.each do |project| %>
     <div class = 'slide-tile'>
       <a href = '/projects/<%= project.title %>/<%= project.id %>'>
         <p class = 'emphasis pink'><%= project.title %></p>
@@ -21,7 +20,9 @@
             <div class = 'progress-bar grey-bar' role="progressbar" style="width: <%= percent_remaining(project) %>%">
             </div>
           </div>
-          <p class = 'description-txt'><%= project.description %></p>
+          <div class = 'description'>
+            <p><%= project.description %></p>
+          </div>
         </div>
       </a>
     </div>
@@ -41,7 +42,7 @@
 
 <h3 class = 'blue'>New Projects</h3>
 <div class='slider'>
-  <% @projects.each do |project| %>
+  <% @newest_projects.each do |project| %>
     <div class = 'slide-tile'>
       <a href = '/projects/<%= project.title %>/<%= project.id %>'>
         <p class = 'emphasis pink'><%= project.title %></p>
@@ -61,7 +62,9 @@
             <div class = 'progress-bar grey-bar' role="progressbar" style="width: <%= percent_remaining(project) %>%">
             </div>
           </div>
-          <p class = 'description-txt'><%= project.description %></p>
+          <div class = 'description'>
+            <p><%= project.description %></p>
+          </div>
         </div>
       </a>
     </div>

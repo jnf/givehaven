@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
   def index
-    active_projects
+    newest_projects
+    ending_soon
   end
 
   def about
@@ -10,12 +11,12 @@ class HomeController < ApplicationController
   end
 
   private
-  def active_projects
-    @projects = []
-    Project.all.each do |project|
-      if project.project_approval = 'approved' && project.funding_status != 'funded'
-        @projects.push(project)
-      end
-    end
+
+  def newest_projects
+    @newest_projects = Project.where('project_approval = ? AND funding_status = ?', 'approved', 'not funded').order('created_at')
+  end
+
+  def ending_soon
+    @ending_soon = Project.where('project_approval = ? AND funding_status = ?', 'approved', 'not funded').order('expires_on')
   end
 end
