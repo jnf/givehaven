@@ -23,6 +23,10 @@ class VolunteersController < ApplicationController
     redirect_to account_path(@current_user.username)
   end
 
+  def pending_projects
+    @pending_projects = Project.find_by(project_approval: 'pending')
+  end
+
   private
 
   def locate_volunteer

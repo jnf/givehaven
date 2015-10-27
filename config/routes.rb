@@ -34,5 +34,6 @@ Rails.application.routes.draw do
 
   #volunteers
   resources :volunteers, only: [:create, :update, :new, :index]
+  get '/volunteer/pending_projects', to: 'volunteers#pending_projects', as: 'pending_projects'
   get '/volunteer/:user_name/edit', to: 'volunteers#edit', as: 'edit_volunteer'
 end
