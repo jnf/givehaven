@@ -4,6 +4,8 @@
 // GLOBALS
 p {
   font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: .75px;
 }
 
 // HEADER
@@ -167,6 +169,10 @@ height: 75px;
   background-color: #4392f1;
 }
 
+.progress-mini {
+  max-width: 50%;
+}
+
 .tile {
   margin: auto;
   padding: 10px;
@@ -247,11 +253,20 @@ height: 75px;
 }
 
 .slider {
-  width:600px;
-  margin:20px auto;
+  width: 950px;
+  margin: 20px auto;
   text-align:center;
 }
 
-.test {
-  background-color: blue;
+.slide-tile {
+  width: 30%;
+  height: 200px;
+  margin: 10px;
+  border: 4px solid #4392f1;
+}
+
+.slide-tile img {
+  max-width: 100px;
+  float: left;
+  margin-left: 10px;
 }

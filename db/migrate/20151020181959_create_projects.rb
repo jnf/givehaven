@@ -13,7 +13,7 @@ class CreateProjects < ActiveRecord::Migration
       t.float :total_requested
       t.text :organization_details
       t.text :project_details
-      t.date :expires_on, default: Date.today + 3.month
+      t.datetime :expires_on, default: DateTime.now + 3.month
 
       t.timestamps null: false
     end

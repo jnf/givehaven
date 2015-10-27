@@ -1,22 +1,24 @@
-<div class = "test">
+<h3 class = 'blue'>Projects Ending Soon</h3>
 
-<div class="slider">
-  <div><h3>1</h3></div>
-  <div><h3>2</h3></div>
-  <div><h3>3</h3></div>
-  <div><h3>4</h3></div>
-  <div><h3>5</h3></div>
-  <div><h3>6</h3></div>
-  <div><h3>7</h3></div>
-  <div><h3>8</h3></div>
-  <div><h3>9</h3></div>
+<div class='slider'>
+  <% @projects.each do |project| %>
+    <div class = 'slide-tile'>
+      <p class = 'emphasis pink'><%= project.title %></p>
+      <%= image_tag project.image %>
+      <p>Ending: <%= project.expires_on %></p>
+      <div class = 'progress'>
+        <div class = 'progress-bar blue-bar progress-mini' role="progressbar" style="width: <%= percent_complete(project) %>%">
+          $<%= project.total_donated %> raised!
+        </div>
+        <div class = 'progress-bar blue-bar progress-mini' role="progressbar" style="width: <%= percent_remaining(project) %>%">
+          Only $<%= project.total_remaining %> to go!
+        </div>
+      </div>
+    </div>
+  <% end %>
 </div>
 
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="slick.min.js"></script>
-
-<script type="text/javascript">
+<script type='text/javascript'>
   $(document).ready(function(){
       $('.slider').slick({
         dots: true,
@@ -26,4 +28,16 @@
   });
   });
 </script>
+
+<h3 class = 'pink'>New Projects</h3>
+<div class='slider'>
+  <div><h3>1</h3></div>
+  <div><h3>2</h3></div>
+  <div><h3>3</h3></div>
+  <div><h3>4</h3></div>
+  <div><h3>5</h3></div>
+  <div><h3>6</h3></div>
+  <div><h3>7</h3></div>
+  <div><h3>8</h3></div>
+  <div><h3>9</h3></div>
 </div>

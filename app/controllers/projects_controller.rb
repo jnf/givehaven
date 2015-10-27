@@ -26,6 +26,7 @@ before_action :logged_in, except: [:index, :show]
     locate_organization
     @project = Project.create(project_params[:project])
     @project.organization_id = @organization.id
+    @project.expires_on = DateTime.now + 3.month
     if @project.save
       redirect_to my_projects_path(@current_user.username)
     else
