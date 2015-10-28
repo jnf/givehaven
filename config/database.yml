@@ -6,7 +6,7 @@
 #
 default: &default
   adapter: postgresql
-  username: admin
+  username: givehaven
   password: friendsinneed
   host: localhost
   pool: 5
