@@ -20,10 +20,10 @@ coverage
 dstore
 
 # Ignore secrets
-/config/initializers/s3.rb
-/config/initializers/stripe.rb
 .env
-.amazonrc
+privatekey.pem
+csr.pem
+server.crt
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
