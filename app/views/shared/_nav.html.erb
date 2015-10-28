@@ -1,17 +1,17 @@
-<nav class="navbar brand_nav">
-  <div class="container-fluid">
+<nav class='navbar brand_nav'>
+  <div class='container-fluid'>
     <div>
-      <ul class="nav navbar-nav">
-        <li><a href="/">Home</a></li>
-        <li><a href="/how_it_works">How it Works</a></li>
-        <li><a href="/about">About</a></li>
+      <ul class='nav navbar-nav'>
+        <li><a href='/'>Home</a></li>
+        <li><a href='/how_it_works'>How it Works</a></li>
+        <li><a href='/about'>About</a></li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
+      <ul class='nav navbar-nav navbar-right'>
         <% if @current_user %>
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#"><%= @current_user.username %>
-            <span class="caret"></span></a>
-            <ul class="dropdown-menu">
+          <li class='dropdown'>
+            <a class='dropdown-toggle' data-toggle='dropdown' href='#'><%= @current_user.username %>
+            <span class='caret'></span></a>
+            <ul class='dropdown-menu'>
               <li><%= link_to 'Account', account_path(@current_user.username) %></li>
               <% if Organization.find_by user_id: @current_user.id %>
                 <li><%= link_to 'My Projects', my_projects_path(@current_user.username) %></li>
@@ -32,14 +32,14 @@
           </li>
           <li>
             <%= link_to session_path(session[:user_id]), method: :delete do %>
-              <i class="glyphicon glyphicon-log-out">Logout</i>
+              <i class='glyphicon glyphicon-log-out'>Logout</i>
             <% end %>
           </li>
         <% else %>
-          <li><a href="/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li><a href='/signup'><span class='glyphicon glyphicon-user'></span> Sign Up</a></li>
           <li>
             <%= link_to login_path do %>
-              <i class="glyphicon glyphicon-log-out">Login</i>
+              <i class='glyphicon glyphicon-log-out'>Login</i>
             <% end %>
           </li>
         <% end %>

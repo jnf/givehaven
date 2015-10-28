@@ -31,7 +31,7 @@
 
 <h3 class = 'blue'>New Projects</h3>
 <div class='responsive'>
-  <% @ending_soon.each do |project| %>
+  <% @newest_projects.each do |project| %>
   <div class = 'col-sm-3 slide-tile'>
       <a href = '/projects/<%= project.title %>/<%= project.id %>'>
       <p class = 'emphasis pink'><%= project.title %></p>
