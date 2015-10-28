@@ -1,19 +1,50 @@
 <h3 class = 'blue'>Ending Soon</h3>
-<div class='slider'>
+<div class='responsive'>
   <% @ending_soon.each do |project| %>
-    <div class = 'slide-tile'>
+  <div class = 'col-sm-3 slide-tile'>
       <a href = '/projects/<%= project.title %>/<%= project.id %>'>
-        <p class = 'emphasis pink'><%= project.title %></p>
-        <div class = 'col-md-6'>
-          <div class = 'image-container'>
-          <%= image_tag project.image %>
+      <p class = 'emphasis pink'><%= project.title %></p>
+          <div class = 'col-lg-6'>
+            <div class = 'image-container'>
+            <%= image_tag project.image %>
+            </div>
           </div>
-        </div>
         <div class = 'col-md-6'>
         <p><%= days_remaining(project) %> Days Left</p>
         <p><%= percent_complete(project) %>% funded</p>
         </div>
-        <div class = 'col-md-12'>
+        <div class = 'col-lg-12'>
+          <div class = 'progress progress-mini'>
+            <div class = 'progress-bar blue-bar' role="progressbar" style="width: <%= percent_complete(project) %>%">
+            </div>
+            <div class = 'progress-bar grey-bar' role="progressbar" style="width: <%= percent_remaining(project) %>%">
+            </div>
+          </div>
+          <div class = 'description'>
+            <p><%= project.description %></p>
+          </div>
+        </div>
+      </a>
+    </div>
+  <% end %>
+</div>
+
+<h3 class = 'blue'>New Projects</h3>
+<div class='responsive'>
+  <% @ending_soon.each do |project| %>
+  <div class = 'col-sm-3 slide-tile'>
+      <a href = '/projects/<%= project.title %>/<%= project.id %>'>
+      <p class = 'emphasis pink'><%= project.title %></p>
+          <div class = 'col-lg-6'>
+            <div class = 'image-container'>
+            <%= image_tag project.image %>
+            </div>
+          </div>
+        <div class = 'col-md-6'>
+        <p><%= days_remaining(project) %> Days Left</p>
+        <p><%= percent_complete(project) %>% funded</p>
+        </div>
+        <div class = 'col-lg-12'>
           <div class = 'progress progress-mini'>
             <div class = 'progress-bar blue-bar' role="progressbar" style="width: <%= percent_complete(project) %>%">
             </div>
@@ -30,43 +61,36 @@
 </div>
 
 <script type='text/javascript'>
-  $(document).ready(function(){
-      $('.slider').slick({
-        dots: true,
-      infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 3
-  });
-  });
+$('.responsive').slick({
+  dots: true,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
 </script>
-
-<h3 class = 'blue'>New Projects</h3>
-<div class='slider'>
-  <% @newest_projects.each do |project| %>
-    <div class = 'slide-tile'>
-      <a href = '/projects/<%= project.title %>/<%= project.id %>'>
-        <p class = 'emphasis pink'><%= project.title %></p>
-          <div class = 'col-md-6'>
-            <div class = 'image-container'>
-              <%= image_tag project.image %>
-            </div>
-          </div>
-        <div class = 'col-md-6'>
-        <p><%= days_remaining(project) %> Days Left</p>
-        <p><%= percent_complete(project) %>% funded</p>
-        </div>
-        <div class = 'col-md-12'>
-          <div class = 'progress progress-mini'>
-            <div class = 'progress-bar blue-bar' role="progressbar" style="width: <%= percent_complete(project) %>%">
-            </div>
-            <div class = 'progress-bar grey-bar' role="progressbar" style="width: <%= percent_remaining(project) %>%">
-            </div>
-          </div>
-          <div class = 'description'>
-            <p><%= project.description %></p>
-          </div>
-        </div>
-      </a>
-    </div>
-  <% end %>
-</div>
