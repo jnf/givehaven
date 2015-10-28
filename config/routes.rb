@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   get '/about', to: 'home#about', as: 'about'
   get '/how_it_works', to: 'home#how_it_works', as: 'how_it_works'
 
+  #item
+  get '/projects/:title/:id/wishlist', to: 'items#index', as: 'wishlist'
+
   #organizations
   resources :organizations, only: [:create, :update, :new, :index]
   get '/organizations/:name/edit', to: 'organizations#edit', as: 'edit_organization'

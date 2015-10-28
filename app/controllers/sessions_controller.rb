@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   def new
   end
 
-	def create # logging in
+  def create # logging in
     if identify_user && @user.authenticate(params[:session][:password])
       if @user.activated?
 			  session[:user_id] = @user.id
